@@ -12,13 +12,13 @@ Say we want to encrypt/ decrypt a file named /home/user/sample.txt
 
 1. Generate a keyfile using::
 
-    run_des.o -g /tmp/keyfile.key
+    run_des.o -g keyfile.key
 2. Encrypt sample.txt using::
 
-    run_des.o -e /tmp/keyfile.key /home/user/sample.txt /home/user/sample.enc
+    run_des.o -e keyfile.key sample.txt sample.enc
 3. Decrypt sample.txt using::
 
-    run_des.o -d /tmp/keyfile.key /home/user/sample.enc /home/user/sample_decrypted.txt
+    run_des.o -d keyfile.key sample.enc sample_decrypted.txt
 
 Don't lose the key file! you won't be able to decrypt an encrypted if you lose the keyfile.
 
